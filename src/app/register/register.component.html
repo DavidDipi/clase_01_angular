@@ -1,0 +1,18 @@
+<div class="card-form">
+    <form class="form-login" (ngSubmit)="registrar($event)">
+      <h2 class="form-title">Registrarse</h2>
+      <div class="form-group">
+        <label for="inputEmailRegister">Correo electrónico:</label>
+        <input type="email" id="inputEmailRegister" required autofocus [(ngModel)]="email">
+      </div>
+      <div class="form-group">
+        <label for="inputPasswordRegister">Contraseña:</label>
+        <input type="password" id="inputPasswordRegister" required [(ngModel)]="password">
+      </div>
+      <div class="form-group btns">
+        <input type="submit" value="Registrarse">
+        <button type="button" class="btn-navegar" (click)="iniciar()">Iniciar sesión</button>
+      </div>
+    </form>
+  </div>
+  
