@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
-
-
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -26,8 +27,7 @@ export class RegisterComponent {
     this.route.navigateByUrl('');
   }
 
-  registrar(event: Event) {
-    event.preventDefault(); 
+  registrar() {
     console.log('Email:', this.email);
     console.log('Password:', this.password);
     // Verificar si el email y la contraseña se han ingresado
@@ -50,6 +50,8 @@ export class RegisterComponent {
       // Limpiar los campos después de registrar al usuario
       this.email = '';
       this.password = '';
+
+      this.iniciar()
 
       // Podrías redirigir a otra página aquí si es necesario
     }

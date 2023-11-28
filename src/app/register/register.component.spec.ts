@@ -2,10 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterComponent } from './register.component';
 
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
 
 
 
@@ -29,19 +25,3 @@ describe('RegisterComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-@NgModule({
-  declarations: [
-    RegisterComponent
-    // Otros componentes, pipes, etc., si los hay
-  ],
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
-  exports: [
-    RegisterComponent
-    // Otros componentes, pipes, etc., si los hay
-  ]
-})
-export class RegisterModule { }
